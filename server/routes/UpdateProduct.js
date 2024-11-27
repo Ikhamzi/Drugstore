@@ -1,19 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const authenticateUser = require('../middleware/AuthenticateUser');
+const authenticateSeller = require('../middleware/AuthenticateSeller');
 const Product = require('../models/Product');
 
-router.put('/:id', authenticateUser, async (req, res) => {
+router.put('/', authenticateSeller, async (req, res) => {
     try {
         const productId = req.params.id;
-        const updateData = req.body;
+        const { name, price } = req.body;
 
         // Ensure the user is authorized to update the product
         if (req.userType !== 'seller') {
             return res.status(403).send('Unauthorized user.');
         }
 
-        const product = await Product.findByIdAndUpdate(productId, updateData, { new: true });
+        const product = await Product.findByIdAndUpdate(
+            productId,
+            { name, price },
+            { new: true }
+        );
 
         if (!product) {
             return res.status(404).send('Product not found.');

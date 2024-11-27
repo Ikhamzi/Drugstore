@@ -20,6 +20,7 @@ app.use('/SellerData', require('./routes/LSD'));
 app.use('/EnterProduct', require('./routes/ProductEntry'));
 app.use('/PlaceOrder', require('./routes/PlaceOrder'));
 app.use('/Fetchorder', require('./routes/FetchOrders'));
+app.use('/UpdateProduct', require('./routes/UpdateProduct'))
 
 //Default route
 app.get('/', (req, res) => {

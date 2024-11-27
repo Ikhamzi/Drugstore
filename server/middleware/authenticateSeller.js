@@ -15,12 +15,12 @@ const authenticateToken = async (req, res, next) => {
         if (!req.seller) {
             return res.status(404).send('Seller not found');
         }
+        req.userType = 'seller';
         next();
     } catch (err) {
         console.log('Token verification failed:', err.message);
         res.status(400).send('Invalid Token');
     }
-
 };
 
 module.exports = authenticateToken;
