@@ -1,0 +1,77 @@
+/* Footer.css */
+
+/* Overall footer styling */
+.footer {
+  padding: 1rem 0;
+  background-color: #d3d3d3; /* Change background to light grey */
+  color: #ffffff; /* Dark text color */
+}
+
+/* Style for the text-uppercase class (used in titles like "Contact Us") */
+.footer .text-uppercase {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Ensure the list is properly styled */
+.footer .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Margin between each list item in the "Contact Us" section */
+.footer .list-unstyled li {
+  margin-bottom: 8px;
+}
+
+/* General styling for text-dark to ensure text color consistency */
+.footer .text-dark {
+  color: #ffffff !important;
+}
+
+/* Hover effect for text-dark, changes color on hover */
+.footer .text-dark:hover {
+  color: #007bff !important; /* Blue color on hover */
+}
+
+/* Align footer items within the container */
+.footer .container {
+  max-width: 1200px; /* Optional: Limit the max width of the footer */
+}
+
+/* Styling for the contact section, ensuring it aligns to the right */
+.footer .ms-auto {
+  margin-left: auto !important; /* Aligns the contact section to the right */
+}
+
+/* Ensure footer items have proper space on smaller screens */
+.footer .col-lg-6, .footer .col-lg-3 {
+  padding: 0 15px; /* Adds padding to avoid content being too close to the edges */
+}
+
+/* Style for the footer's copyright section */
+.footer .text-center {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Adding background to the copyright section for contrast */
+.footer .text-center p {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  margin: 0;
+  color: #ffffff; /* Ensure the text color stays dark in the copyright section */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .footer .container {
+    padding: 1rem;
+  }
+  
+  .footer .col-lg-6,
+  .footer .col-lg-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
